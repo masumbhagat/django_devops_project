@@ -53,5 +53,18 @@ jobs:
           python manage.py migrate
 
       - name: Run tests
+        env:
+          DB_NAME: django_db
+          DB_USER: postgres
+          DB_PASSWORD: 1234
+          DB_HOST: localhost
+          DB_PORT: 5432
         run: |
+          python manage.py migrate
           python manage.py test
+      
+      - name: Run Lint
+        run: |
+          pip install flake8
+          flake8 . 
+         
