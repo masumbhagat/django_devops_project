@@ -18,3 +18,4 @@ This is a sample Django project containerized using Docker and integrated with C
 ```bash
 git clone https://github.com/masumbhagat/django-devops-app.git
 cd django-devops-app
+# Triggered GitHub Actions
